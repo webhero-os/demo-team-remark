@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Über Team Remark — Dresdner Markenagentur seit 2015. Lernen Sie unser Team, unsere Geschichte und unsere Werte kennen.">
+  <title>Über uns — Team Remark Dresden</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    @media (min-width: 1024px) {
+      .story-grid { grid-template-columns: 1fr 1fr; gap: 100px; }
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .tl-item {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 24px;
+      padding-bottom: 40px;
+      position: relative;
+    }
+    .tl-item:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: 35px;
+      top: 28px;
+      bottom: 0;
+      width: 1px;
+      background: var(--color-border-light);
+    }
+    .tl-year {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--color-primary);
+      padding-top: 4px;
+      text-align: right;
+    }
+    .tl-dot {
+      position: absolute;
+      left: 29px; top: 6px;
+      width: 13px; height: 13px;
+      border-radius: 50%;
+      border: 2px solid var(--color-primary);
+      background: var(--color-bg);
+    }
+    .tl-content { padding-left: 8px; }
+    .tl-title { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 8px; }
+    .tl-desc  { font-size: 0.9rem; line-height: 1.7; color: var(--color-text-muted); }
+
+    .award-strip {
+      display: flex;
+      gap: 1px;
+      background: var(--color-border-light);
+      flex-wrap: wrap;
+    }
+    .award-item {
+      background: var(--color-surface);
+      padding: 28px 32px;
+      flex: 1;
+      min-width: 180px;
+    }
+    .award-year { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 6px; display: block; }
+    .award-name { font-family: var(--font-display); font-size: 1rem; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo">Team <span>Remark</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Navigation öffnen">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html">Start</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="ueber-uns.html" class="active">Über uns</a>
+        <a href="kontakt.html" class="nav-cta">Gespräch starten</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── PAGE HERO ── -->
+    <section class="page-hero">
+      <span class="page-watermark">Team</span>
+      <div class="container">
+        <div class="section-label">
+          <span class="text-label">Wer wir sind</span>
+        </div>
+        <h1 class="display-lg mt-16" style="max-width: 760px;">
+          Zwölf Menschen.<br>Eine <em class="text-gold">Leidenschaft.</em>
+        </h1>
+        <p class="text-body-lg mt-24" style="max-width: 540px;">
+          Wir sind eine unabhängige Markenagentur aus Dresden — neugierig, direkt und mit echtem Interesse an den Unternehmen, mit denen wir arbeiten.
+        </p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ── GESCHICHTE ── -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="story-grid">
+          <div>
+            <div class="section-label">
+              <span class="text-label">Unsere Geschichte</span>
+            </div>
+            <h2 class="display-md mt-16" style="margin-bottom: 32px;">
+              Aus drei Ideen<br>wurde <em>ein Team.</em>
+            </h2>
+            <p class="text-body-lg" style="margin-bottom: 20px;">
+              2015 gründeten Marcus Riedel und zwei Kollegen Team Remark in einer Dresdner Altbauwohnung — mit dem Anspruch, Markenkommunikation anders zu machen: ehrlicher, strategischer, nachhaltiger.
+            </p>
+            <p style="font-size:0.95rem; line-height:1.85; color:var(--color-text-muted); margin-bottom:20px;">
+              Was als kleines Kreativstudio begann, ist heute eine voll integrierte Markenagentur mit zwölf Spezialistinnen und Spezialisten — und einem Kundenstamm, der vom Dresdner Mittelstand bis zu national agierenden Unternehmen reicht.
+            </p>
+            <p style="font-size:0.95rem; line-height:1.85; color:var(--color-text-muted);">
+              Geblieben ist, was uns von Anfang an angetrieben hat: die Überzeugung, dass eine gute Marke entsteht, wenn Menschen wirklich zuhören — und dann mutig genug sind, eine eigene Haltung einzunehmen.
+            </p>
+          </div>
+
+          <div class="timeline mt-16">
+            <div class="tl-item">
+              <span class="tl-year">2015</span>
+              <div style="position:relative;">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4 class="tl-title">Gründung in Dresden</h4>
+                  <p class="tl-desc">Drei Kreative, ein Büro in der Neustadt, der erste Kunde nach drei Wochen. Team Remark entsteht.</p>
+                </div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <span class="tl-year">2017</span>
+              <div style="position:relative;">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4 class="tl-title">Erster Großauftrag</h4>
+                  <p class="tl-desc">Komplettes Rebranding eines regionalen Industrieunternehmens — Marke, Design, Website und Kommunikationsstrategie.</p>
+                </div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <span class="tl-year">2019</span>
+              <div style="position:relative;">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4 class="tl-title">Eigenes Büro, eigenes Team</h4>
+                  <p class="tl-desc">Umzug in das heutige Büro an der Schule 15. Das Team wächst auf acht Personen.</p>
+                </div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <span class="tl-year">2022</span>
+              <div style="position:relative;">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4 class="tl-title">Digitale Expansion</h4>
+                  <p class="tl-desc">Aufbau des digitalen Bereichs: Performance Marketing, Social Media und Web-Entwicklung werden ins Kernportfolio integriert.</p>
+                </div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <span class="tl-year">2025</span>
+              <div style="position:relative;">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4 class="tl-title">Heute: 12 Menschen, 80+ Kunden</h4>
+                  <p class="tl-desc">Ein gewachsenes, eingespieltes Team — und der Anspruch, jede Zusammenarbeit so zu gestalten, als wäre es die erste.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ZAHLEN ── -->
+    <section style="padding:0;" class="bg-surface">
+      <div class="container" style="padding-left:0;padding-right:0;max-width:100%;">
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <span class="stat-num">2015</span>
+            <span class="stat-lbl">Gründungsjahr</span>
+          </div>
+          <div class="stat-item reveal">
+            <span class="stat-num">12</span>
+            <span class="stat-lbl">Teammitglieder</span>
+          </div>
+          <div class="stat-item reveal">
+            <span class="stat-num">80+</span>
+            <span class="stat-lbl">Kunden betreut</span>
+          </div>
+          <div class="stat-item reveal">
+            <span class="stat-num">100%</span>
+            <span class="stat-lbl">Inhabergeführt</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TEAM ── -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">
+            <span class="text-label">Die Menschen dahinter</span>
+          </div>
+          <h2 class="display-md mt-16">Unser <em>Team</em></h2>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card reveal">
+            <div class="team-avatar">MR</div>
+            <h3 class="team-name">Marcus Riedel</h3>
+            <p class="team-role">Gründer & Kreativdirektor</p>
+            <p class="team-bio">15 Jahre Markenerfahrung, davon 10 bei Team Remark. Marcus glaubt, dass die besten Ideen im Dialog entstehen — nicht am Reißbrett.</p>
+          </div>
+          <div class="team-card reveal">
+            <div class="team-avatar">SV</div>
+            <h3 class="team-name">Sarah Voigt</h3>
+            <p class="team-role">Leiterin Markenstrategie</p>
+            <p class="team-bio">Strategin mit Agentur- und Unternehmensseite. Sarah durchdenkt Marken von innen heraus — methodisch, aber immer mit dem Menschen im Blick.</p>
+          </div>
+          <div class="team-card reveal">
+            <div class="team-avatar">JF</div>
+            <h3 class="team-name">Jan Fischer</h3>
+            <p class="team-role">Digital Director</p>
+            <p class="team-bio">Webentwickler, UX-Thinker und Data-Nerd in einem. Jan verantwortet alles, was sich im Browser öffnet — und sorgt dafür, dass es auch funktioniert.</p>
+          </div>
+          <div class="team-card reveal">
+            <div class="team-avatar">LM</div>
+            <h3 class="team-name">Lena Müller</h3>
+            <p class="team-role">Head of Content</p>
+            <p class="team-bio">Journalistischer Hintergrund, Agenturherz. Lena schreibt Texte, die gelesen werden wollen — und entwickelt Inhaltskonzepte, die wirklich funktionieren.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WERTE ── -->
+    <section class="section-pad bg-surface">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">
+            <span class="text-label">Was uns leitet</span>
+          </div>
+          <h2 class="display-md mt-16">Unsere <em>Werte</em></h2>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-item reveal">
+            <h3 class="value-title">Klarheit vor Schönheit</h3>
+            <p class="value-desc">Wir entwickeln keine Kommunikation, die nur gut aussieht. Sie muss verständlich sein, überzeugen und etwas bewirken. Form folgt Funktion — und Haltung.</p>
+          </div>
+          <div class="value-item reveal">
+            <h3 class="value-title">Ehrlichkeit als Methode</h3>
+            <p class="value-desc">Wir sagen, was wir denken. Nicht um zu gefallen, sondern weil unsere Kunden Sparringspartner verdienen, die ihre Arbeit ernst nehmen — und respektvoll die Wahrheit sagen.</p>
+          </div>
+          <div class="value-item reveal">
+            <h3 class="value-title">Nachhaltigkeit im Denken</h3>
+            <p class="value-desc">Wir bauen keine Wegwerf-Kommunikation. Unsere Strategien und Designs sollen Jahre tragen — und mit dem Unternehmen wachsen, nicht nach jeder Saisonmode überholt werden.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── DRESDEN ── -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-label">
+          <span class="text-label">Unser Standort</span>
+        </div>
+        <h2 class="display-md mt-16" style="margin-bottom: 48px;">
+          Dresden ist<br><em>kein Zufall.</em>
+        </h2>
+
+        <div class="dresden-section reveal">
+          <div>
+            <p style="font-size:1rem; line-height:1.85; color:var(--color-text-muted); margin-bottom:20px;">
+              Wir lieben diese Stadt — ihre Widersprüche, ihre Energie, ihr Mittelstand. Dresden ist einer der wirtschaftlich stärksten Standorte Ostdeutschlands, mit einer außergewöhnlichen Dichte an technologieaffinen und handwerklich geprägten Unternehmen.
+            </p>
+            <p style="font-size:1rem; line-height:1.85; color:var(--color-text-muted); margin-bottom:32px;">
+              Genau dort sind wir zu Hause. Wir kennen die Region, ihre Branchen und ihren besonderen Charakter. Das gibt uns einen echten Vorteil — und unseren Kunden eine Agentur, die wirklich versteht, womit und für wen sie arbeitet.
+            </p>
+            <div style="font-size:0.9rem; color:var(--color-text-muted);">
+              <p style="color:var(--color-primary); font-weight:600; letter-spacing:0.1em; text-transform:uppercase; font-size:0.72rem; margin-bottom:10px;">Adresse</p>
+              <p>An der Schule 15<br>01259 Dresden<br>Deutschland</p>
+            </div>
+          </div>
+          <div class="dresden-map-mock">
+            <span class="map-pin">📍</span>
+            <p class="map-addr">An der Schule 15<br>01259 Dresden</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Lernen wir uns<br><em>kennen.</em></h2>
+        <p>Ein erstes Gespräch ist immer unverbindlich — und oft der Anfang von etwas Gutem. Wir freuen uns auf Sie.</p>
+        <div class="btn-group">
+          <a href="kontakt.html" class="btn btn-primary">Kontakt aufnehmen</a>
+          <a href="leistungen.html" class="btn btn-outline">Leistungen ansehen</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="footer-logo">Team <span style="color:var(--color-primary)">Remark</span></span>
+          <p class="footer-tagline">Strategische Markenkommunikation für Unternehmen, die in Erinnerung bleiben wollen. Seit 2015 in Dresden.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="Instagram">ig</a>
+            <a href="#" class="social-link" aria-label="Facebook">fb</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-h">Navigation</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-h">Kontakt</p>
+          <ul class="footer-links">
+            <li><a href="tel:+4915156768304">+49 151 56768304</a></li>
+            <li><a href="mailto:info@remark.de">info@remark.de</a></li>
+            <li><a href="https://team-remark.de" target="_blank" rel="noopener">team-remark.de</a></li>
+          </ul>
+          <p style="margin-top:24px; font-size:0.88rem; color:var(--color-text-muted); line-height:1.7;">
+            An der Schule 15<br>01259 Dresden
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 Team Remark. Alle Rechte vorbehalten.</p>
+        <div class="footer-legal">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const siteNav   = document.getElementById('siteNav');
+    navToggle.addEventListener('click', () => {
+      const isOpen = navToggle.classList.toggle('open');
+      siteNav.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    siteNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('open');
+        siteNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 70);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kontakt — Team Remark Dresden. Schreiben Sie uns oder rufen Sie an. Wir melden uns innerhalb von 24 Stunden.">
+  <title>Kontakt — Team Remark Dresden</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+    }
+    .hours-row {
+      display: contents;
+    }
+    .hours-day  { font-size: 0.85rem; color: var(--color-text-muted); padding: 6px 0; border-bottom: 1px solid var(--color-border); }
+    .hours-time { font-size: 0.85rem; color: var(--color-text); padding: 6px 0; border-bottom: 1px solid var(--color-border); text-align: right; }
+
+    .faq-section { background: var(--color-surface); }
+
+    .contact-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(196,154,82,0.1);
+      border: 1px solid rgba(196,154,82,0.25);
+      border-radius: 100px;
+      padding: 8px 16px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--color-primary);
+      margin-bottom: 32px;
+    }
+    .contact-badge::before {
+      content: '';
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: 0.5; transform: scale(0.8); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo">Team <span>Remark</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Navigation öffnen">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html">Start</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="kontakt.html" class="nav-cta active">Gespräch starten</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── PAGE HERO ── -->
+    <section class="page-hero">
+      <span class="page-watermark">Kontakt</span>
+      <div class="container">
+        <div class="contact-badge">Wir antworten innerhalb von 24 Stunden</div>
+        <h1 class="display-lg" style="max-width:680px;">
+          Schreiben Sie uns.<br><em class="text-gold">Wir freuen uns.</em>
+        </h1>
+        <p class="text-body-lg mt-24" style="max-width:500px;">
+          Ob konkretes Projekt, erste Idee oder einfach eine Frage — kein Anliegen ist zu klein, um es zu teilen. Wir melden uns.
+        </p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ── KONTAKTFORMULAR + INFO ── -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- FORM -->
+          <div>
+            <div id="contactForm">
+              <div class="section-label" style="margin-bottom:32px;">
+                <span class="text-label">Ihre Nachricht</span>
+              </div>
+
+              <form id="theForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="bereich">Worum geht es?</label>
+                  <select class="form-select" id="bereich" name="bereich">
+                    <option value="" disabled selected>Bitte wählen…</option>
+                    <option value="markenstrategie">Markenstrategie</option>
+                    <option value="corporate-design">Corporate Design</option>
+                    <option value="digital">Digitale Kommunikation</option>
+                    <option value="content">Content & Storytelling</option>
+                    <option value="social-media">Social Media</option>
+                    <option value="kampagne">Kampagnenentwicklung</option>
+                    <option value="sonstiges">Sonstiges / Allgemeine Anfrage</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="name">Ihr Name *</label>
+                    <input class="form-input" type="text" id="name" name="name" placeholder="Maria Mustermann" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="unternehmen">Unternehmen</label>
+                    <input class="form-input" type="text" id="unternehmen" name="unternehmen" placeholder="Muster GmbH">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="email">E-Mail-Adresse *</label>
+                    <input class="form-input" type="email" id="email" name="email" placeholder="maria@muster.de" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="telefon">Telefon</label>
+                    <input class="form-input" type="tel" id="telefon" name="telefon" placeholder="+49 351 …">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="nachricht">Ihre Nachricht *</label>
+                  <textarea class="form-textarea" id="nachricht" name="nachricht" placeholder="Beschreiben Sie kurz, worum es geht. Was ist Ihr Ziel? Wo drückt der Schuh?" required></textarea>
+                </div>
+
+                <div style="display:flex; align-items:flex-start; gap:12px; margin-bottom:32px;">
+                  <input type="checkbox" id="datenschutz" name="datenschutz" required style="margin-top:4px; accent-color:var(--color-primary); width:16px; height:16px; flex-shrink:0;">
+                  <label for="datenschutz" style="font-size:0.85rem; color:var(--color-text-muted); line-height:1.6;">
+                    Ich habe die <a href="#" style="color:var(--color-primary); text-decoration:underline;">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage einverstanden.
+                  </label>
+                </div>
+
+                <p id="formError" style="display:none; color:#e57373; font-size:0.85rem; margin-bottom:16px;"></p>
+
+                <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+                  Nachricht absenden
+                </button>
+              </form>
+            </div>
+
+            <!-- SUCCESS STATE -->
+            <div class="form-success" id="formSuccess">
+              <span class="success-icon">✦</span>
+              <h3>Nachricht erhalten!</h3>
+              <p>Vielen Dank für Ihre Anfrage. Wir melden uns innerhalb von 24 Stunden bei Ihnen — versprochen.</p>
+              <p style="margin-top:16px; font-size:0.85rem; color:var(--color-text-subtle);">
+                Bis dahin: Werfen Sie gerne einen Blick auf unsere <a href="leistungen.html" style="color:var(--color-primary);">Leistungsübersicht</a>.
+              </p>
+            </div>
+          </div>
+
+          <!-- CONTACT INFO -->
+          <aside class="contact-info">
+            <div class="ci-group">
+              <span class="ci-label">Telefon</span>
+              <div class="ci-value">
+                <a href="tel:+4915156768304">+49 151 56768304</a>
+              </div>
+            </div>
+            <div class="ci-group">
+              <span class="ci-label">E-Mail</span>
+              <div class="ci-value">
+                <a href="mailto:info@remark.de">info@remark.de</a>
+              </div>
+            </div>
+            <div class="ci-group">
+              <span class="ci-label">Adresse</span>
+              <div class="ci-value">
+                An der Schule 15<br>
+                01259 Dresden<br>
+                Deutschland
+              </div>
+            </div>
+            <div class="ci-group">
+              <span class="ci-label">Erreichbarkeit</span>
+              <div class="hours-grid" style="margin-top:8px;">
+                <span class="hours-day">Montag – Donnerstag</span>
+                <span class="hours-time">9:00 – 18:00</span>
+                <span class="hours-day">Freitag</span>
+                <span class="hours-time">9:00 – 15:00</span>
+                <span class="hours-day">Wochenende</span>
+                <span class="hours-time">Geschlossen</span>
+              </div>
+            </div>
+            <div class="ci-group">
+              <span class="ci-label">Standort</span>
+              <div class="dresden-map-mock" style="margin-top:16px;">
+                <span class="map-pin">📍</span>
+                <p class="map-addr">An der Schule 15<br>01259 Dresden</p>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section class="section-pad faq-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">
+            <span class="text-label">Häufige Fragen</span>
+          </div>
+          <h2 class="display-md mt-16">Was Sie<br><em>wissen möchten.</em></h2>
+        </div>
+
+        <div style="max-width:760px;">
+          <div class="faq-list">
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                Wie läuft eine erste Zusammenarbeit ab?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a">
+                <div class="faq-a-inner">
+                  Wir starten immer mit einem kostenlosen Erstgespräch — persönlich in Dresden oder per Videocall. Dabei hören wir zu, stellen Fragen und verstehen Ihr Anliegen. Danach erhalten Sie ein maßgeschneidertes Angebot. Kein Druck, keine Schubladen.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                Für welche Unternehmensgrößen arbeiten Sie?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a">
+                <div class="faq-a-inner">
+                  Unser Schwerpunkt liegt im Mittelstand — von kleinen inhabergeführten Betrieben bis zu Unternehmen mit mehreren hundert Mitarbeitenden. Wir arbeiten branchenübergreifend: Industrie, Handwerk, Dienstleistung, Gesundheit, Technologie.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                Was kostet ein Projekt bei Team Remark?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a">
+                <div class="faq-a-inner">
+                  Pauschale Preise gibt es bei uns nicht — und das aus gutem Grund: Jedes Projekt ist anders. Ein Logo-Entwicklungsprojekt kostet weniger als eine vollständige Markenstrategie mit Rebranding. Wir erstellen nach dem Erstgespräch ein transparentes Angebot, das Umfang und Budget klar abbildet.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                Wie lange dauert ein typisches Projekt?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a">
+                <div class="faq-a-inner">
+                  Das hängt stark vom Umfang ab. Eine Logoentwicklung dauert in der Regel 3–5 Wochen, ein vollständiges Rebranding 2–4 Monate, eine Kampagnenentwicklung je nach Komplexität 4–8 Wochen. Wir arbeiten mit klaren Zeitplänen und halten sie ein.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                Arbeiten Sie auch mit Unternehmen außerhalb Dresdens?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a">
+                <div class="faq-a-inner">
+                  Ja, selbstverständlich. Unser Kundenstamm reicht von Dresden über Sachsen bis in andere Bundesländer. Projekte laufen problemlos remote ab — für persönliche Meetings kommen wir auch gerne zu Ihnen.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="footer-logo">Team <span style="color:var(--color-primary)">Remark</span></span>
+          <p class="footer-tagline">Strategische Markenkommunikation für Unternehmen, die in Erinnerung bleiben wollen. Seit 2015 in Dresden.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="Instagram">ig</a>
+            <a href="#" class="social-link" aria-label="Facebook">fb</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-h">Navigation</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-h">Kontakt</p>
+          <ul class="footer-links">
+            <li><a href="tel:+4915156768304">+49 151 56768304</a></li>
+            <li><a href="mailto:info@remark.de">info@remark.de</a></li>
+            <li><a href="https://team-remark.de" target="_blank" rel="noopener">team-remark.de</a></li>
+          </ul>
+          <p style="margin-top:24px; font-size:0.88rem; color:var(--color-text-muted); line-height:1.7;">
+            An der Schule 15<br>01259 Dresden
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 Team Remark. Alle Rechte vorbehalten.</p>
+        <div class="footer-legal">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const siteNav   = document.getElementById('siteNav');
+    navToggle.addEventListener('click', () => {
+      const isOpen = navToggle.classList.toggle('open');
+      siteNav.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    siteNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('open');
+        siteNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item    = btn.closest('.faq-item');
+        const isOpen  = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+        btn.setAttribute('aria-expanded', !isOpen);
+      });
+    });
+
+    // Contact form
+    const theForm      = document.getElementById('theForm');
+    const formSuccess  = document.getElementById('formSuccess');
+    const contactForm  = document.getElementById('contactForm');
+    const formError    = document.getElementById('formError');
+
+    theForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name      = document.getElementById('name').value.trim();
+      const email     = document.getElementById('email').value.trim();
+      const nachricht = document.getElementById('nachricht').value.trim();
+      const dsgvo     = document.getElementById('datenschutz').checked;
+
+      if (!name || !email || !nachricht) {
+        formError.style.display = 'block';
+        formError.textContent = 'Bitte füllen Sie alle Pflichtfelder aus.';
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        formError.style.display = 'block';
+        formError.textContent = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
+        return;
+      }
+      if (!dsgvo) {
+        formError.style.display = 'block';
+        formError.textContent = 'Bitte bestätigen Sie die Datenschutzerklärung.';
+        return;
+      }
+
+      formError.style.display = 'none';
+
+      // Simulate submit with loading state
+      const btn = theForm.querySelector('button[type="submit"]');
+      btn.textContent = 'Wird gesendet…';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        contactForm.style.display = 'none';
+        formSuccess.classList.add('show');
+        window.scrollTo({ top: document.getElementById('contactForm').offsetTop - 100, behavior: 'smooth' });
+      }, 900);
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 70);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
